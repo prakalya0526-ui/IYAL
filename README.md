@@ -1,4 +1,4 @@
-# SafeAlert: Women Safety Alert System
+# IYAL: Women Safety Alert System
 
 A low-cost wearable panic device (ESP32) that alerts a registered security guard on Telegram,
 with the victim's location, within seconds. No SIM card or GSM module is needed.
