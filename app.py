@@ -85,12 +85,22 @@ def tg(method, payload):
         return False
 
 
+
 def reverse_geocode(lat, lng):
     try:
         r = requests.get(
             "https://nominatim.openstreetmap.org/reverse",
-            params={"lat": lat, "lon": lng, "format": "json"},
+            params={
+                "lat": lat,
+                "lon": lng,
+                "format": "json"
+            },
             headers={"User-Agent": "iyal-hackathon"},
-            timeout=5,
+            timeout=5
         ).json()
+
         return r.get("display_name", "Unknown area")
+
+    except Exception as e:
+        print("Location error:", e)
+        return "Unknown area"
